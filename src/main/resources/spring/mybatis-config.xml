@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<!-- SpringConfiguration으로 이동
+	<typeAliases>
+		<typeAlias type="com.user.bean.UserDTO" alias="user"/>
+		<typeAlias type="com.file.bean.UploadDTO" alias="upload"/>
+	</typeAliases> -->
+</configuration>

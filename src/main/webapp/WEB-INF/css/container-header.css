@@ -1,0 +1,11 @@
+#container-header {
+	width: 40%;
+	margin: 50px auto 20px auto;
+}
+
+img#mang {
+	width: 150px;
+	height: 160px;
+	border-radius: 50px;
+	border: 2px solid gray;
+}

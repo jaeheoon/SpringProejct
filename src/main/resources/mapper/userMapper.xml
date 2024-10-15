@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- <mapper namespace="userSQL"> -->
+<mapper namespace="com.user.dao.UserDAO">
+	<select id="findId" parameterType="String" resultType="userDTO">
+		select * from usertable where id=#{id}
+	</select>
+	
+	<insert id="write" parameterType="userDTO">
+		insert into usertable(name, id, pwd) values(#{name}, #{id}, #{pwd})
+	</insert>
+	
+	<select id="list" parameterType="HashMap">
+		SELECT * 
+	    FROM usertable 
+	    LIMIT #{startNum}, #{endNum}
+	</select>
+	
+	<select id="getTotalNum" resultType="int">
+	 	select count(*) from usertable
+	 </select>
+	 
+	 <update id="update" parameterType="userDTO">
+		update usertable set name=#{name}, pwd=#{pwd} where id=#{id}
+	</update>
+	
+	<select id="idCheck" parameterType="HashMap" resultType="userDTO">
+		select * from usertable where id=#{id} and pwd=#{pwd}
+	</select>
+	
+	<delete id="delete" parameterType="String">
+		delete from usertable where id=#{id}
+	</delete>
+</mapper>
